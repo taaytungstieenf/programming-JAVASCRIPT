@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Mục 2 - Thay đổi Text</title>
+</head>
+<body>
+    <h1 id="heading">Văn bản ban đầu</h1>
+    <button id="btn-change">Thay đổi chữ</button>
+
+    <script>
+        const headingElement = document.getElementById("heading");
+        const btnChange = document.getElementById("btn-change");
+
+        // Gán sự kiện click vào nút bấm để thay đổi text
+        btnChange.addEventListener("click", function() {
+            // Thay đổi nội dung chữ bằng textContent
+            headingElement.textContent = "Nội dung đã được cập nhật thành công!";
+        });
+    </script>
+</body>
+</html>
