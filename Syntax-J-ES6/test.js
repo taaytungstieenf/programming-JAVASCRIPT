@@ -1,20 +1,25 @@
-// 1. Template Literals (Chuỗi nội suy với dấu backtick `)
-const name = "Lan";
-const age = 22;
-console.log(`Tôi tên là ${name}, năm nay ${age} tuổi.`);
+// 1. Template Literals - backtick `` 
+const fullname = "Tae Nguyen";
+const age = 27;
+const job = "Developer";
+console.log("My name is " + fullname + ", I am " + age + " years old.");
+console.log(`My name is ${fullname}, I am ${age} years old.`);
 
-// 2. Destructuring (Phân rã mảng / object)
-const user = { username: "dev123", email: "dev@gmail.com" };
-const { username, email } = user; // Trích xuất trực tiếp thành biến
-console.log(username); // "dev123"
+// 2. Destructuring (Array / object)
+const user = { name: "Tae", email: "nguyenductay121999@gmail.com" };
+const {name, email} = user;
+console.log(name);
+console.log(email);
 
-const point = [10, 20];
-const [x, y] = point;
+const point = [10, 20, 30];
+const [x, y, z] = point;
 console.log(x); // 10
+console.log(y); // 20
+console.log(z); // 30
 
-// 3. Spread Operator (...) - Trải các phần tử
+// 3. Spread Operator (...)
 const arr1 = [1, 2];
-const arr2 = [...arr1, 3, 4]; // [1, 2, 3, 4]
+const arr2 = [...arr1, 3, 4];   // [1, 2, 3, 4]
 
 const obj1 = { a: 1 };
 const obj2 = { ...obj1, b: 2 }; // { a: 1, b: 2 }
@@ -25,14 +30,14 @@ function sumAll(...nums) {
 }
 console.log(sumAll(1, 2, 3, 4)); // 10
 
-// 5. Classes (Hướng đối tượng)
+// 5. Classes
 class Animal {
     constructor(name) {
         this.name = name;
     }
     speak() {
-        console.log(`${this.name} phát ra tiếng kêu.`);
+        console.log(`${this.name} bark`);
     }
 }
-const dog = new Animal("Cún");
-dog.speak(); // "Cún phát ra tiếng kêu."
+const dog = new Animal("Dog");
+dog.speak();
