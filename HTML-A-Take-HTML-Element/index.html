@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Mục 1 - Lấy HTML Element</title>
+  <meta charset="UTF-8">
+  <title>1. Lấy HTML Element</title>
 </head>
 <body>
-    <h1 id="title">Tiêu đề trang</h1>
-    <p class="text-content">Đoạn văn 1</p>
-    <p class="text-content">Đoạn văn 2</p>
+  <h1 id="main-title">Tiêu đề ban đầu</h1>
+  <p class="description">Đoạn văn bản mô tả ban đầu.</p>
 
-    <script>
-        // 1. Lấy theo ID
-        const titleElement = document.getElementById("title");
-        console.log("Theo ID:", titleElement);
+  <script>
+    // Lấy element qua ID và Class
+    const titleElement = document.getElementById("main-title");
+    const descElement = document.querySelector(".description");
 
-        // 2. Lấy theo Class Name (trả về danh sách HTMLCollection)
-        const textElements = document.getElementsByClassName("text-content");
-        console.log("Theo Class Name:", textElements);
-
-        // 3. Lấy theo querySelector (lấy phần tử đầu tiên khớp với CSS selector)
-        const firstP = document.querySelector(".text-content");
-        console.log("querySelector:", firstP);
-
-        // 4. Lấy theo querySelectorAll (lấy tất cả các phần tử khớp, trả về NodeList)
-        const allP = document.querySelectorAll("p");
-        console.log("querySelectorAll:", allP);
-    </script>
+    // In ra console để kiểm tra
+    console.log("Element theo ID:", titleElement);
+    console.log("Element theo Class:", descElement);
+  </script>
 </body>
 </html>
+
+<!-- Cầu nối giữa HTML và JS: Đây là bước bắt buộc đầu tiên trong lập trình DOM. 
+ Bạn cần cho JavaScript biết chính xác đối tượng nào trên giao diện mà nó cần làm việc cùng. -->
+
+<!-- Xác định phạm vi tác động: Giúp truy xuất thuộc tính, thay đổi kiểu dáng, 
+ nội dung hoặc đính kèm sự kiện chỉ riêng cho element đó mà không làm ảnh hưởng đến phần còn lại của trang web.-->

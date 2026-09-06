@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>9. Input Event</title>
+</head>
+<body>
+  <input type="text" id="liveText" placeholder="Gõ văn bản để xem hiệu ứng...">
+  <p>Xem trước trực tiếp: <strong id="preview"></strong></p>
+
+  <script>
+    const liveText = document.getElementById("liveText");
+    const preview = document.getElementById("preview");
+
+    // Lắng nghe từng phím bấm hoặc thao tác thay đổi dữ liệu
+    liveText.addEventListener("input", function(e) {
+      preview.innerText = e.target.value;
+    });
+  </script>
+</body>
+</html>

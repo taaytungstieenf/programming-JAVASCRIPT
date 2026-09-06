@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>10. Validation</title>
+  <style>
+    .error { color: red; }
+    .success { color: green; }
+    .input-error { border: 2px solid red; }
+    .input-success { border: 2px solid green; }
+  </style>
+</head>
+<body>
+  <form id="regForm">
+    <label for="pass">Mật khẩu (tối thiểu 6 ký tự):</label><br>
+    <input type="password" id="pass">
+    <button type="submit">Kiểm tra</button>
+  </form>
+  <p id="errorMsg"></p>
+
+  <script>
+    const regForm = document.getElementById("regForm");
+    const passInput = document.getElementById("pass");
+    const errorMsg = document.getElementById("errorMsg");
+
+    regForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const val = passInput.value;
+
+      // Validation độ dài mật khẩu
+      if (val.length < 6) {
+        errorMsg.innerText = "Lỗi: Mật khẩu phải có ít nhất 6 ký tự!";
+        errorMsg.className = "error";
+        passInput.className = "input-error";
+      } else {
+        errorMsg.innerText = "Thành công: Mật khẩu hợp lệ!";
+        errorMsg.className = "success";
+        passInput.className = "input-success";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>3. Thay đổi HTML</title>
+</head>
+<body>
+  <div id="content-box">
+    <p>Nội dung cũ trong thẻ div.</p>
+  </div>
+
+  <script>
+    const contentBox = document.getElementById("content-box");
+    // Ghi đè cấu trúc HTML mới
+    contentBox.innerHTML = `
+      <h2>Tiêu đề mới đã được chèn!</h2>
+      <p>Đoạn văn này chứa từ <strong>in đậm</strong> tạo bởi <code>innerHTML</code>.</p>
+    `;
+  </script>
+</body>
+</html>

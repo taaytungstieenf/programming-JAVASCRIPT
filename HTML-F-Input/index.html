@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>6. Input</title>
+</head>
+<body>
+  <input type="text" id="usernameInput" placeholder="Nhập tên của bạn...">
+  <button id="submitBtn">Xác nhận</button>
+  <p id="resultText">Tên của bạn: </p>
+
+  <script>
+    const input = document.getElementById("usernameInput");
+    const button = document.getElementById("submitBtn");
+    const resultText = document.getElementById("resultText");
+
+    button.addEventListener("click", function() {
+      // Đọc giá trị từ ô input
+      const inputValue = input.value;
+      resultText.innerText = "Tên của bạn: " + inputValue;
+    });
+  </script>
+</body>
+</html>

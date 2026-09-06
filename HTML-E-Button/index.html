@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>5. Button</title>
+</head>
+<body>
+  <button id="actionBtn">Nhấn vào đây</button>
+  <p id="status">Trạng thái: Chưa bấm nút.</p>
+
+  <script>
+    const button = document.getElementById("actionBtn");
+    const statusText = document.getElementById("status");
+
+    // Xử lý khi nhấn nút
+    button.onclick = function() {
+      statusText.innerText = "Trạng thái: Nút đã được nhấn thành công!";
+    };
+  </script>
+</body>
+</html>
